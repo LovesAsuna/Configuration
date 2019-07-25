@@ -1,0 +1,18 @@
+{
+  "uniqueId": "温暖小屋",
+  "icon": "OAK_LOG",
+  "displayName": "§6温暖小屋",
+  "description": [
+    "§c一个温暖的小屋和一头老牛!",
+    "§a包含一个温暖小屋",
+    "§c包含一个地狱空岛",
+    "§6包含一个末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "温暖小屋",
+    "NETHER": "nether-island",
+    "THE_END": "end-island"
+  },
+  "slot": 2
+}

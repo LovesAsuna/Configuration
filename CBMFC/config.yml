@@ -1,0 +1,164 @@
+Prefix: '&e<3> &7Oriaspiration &e<3> &6<9> '
+VariablesInChat: true
+NoPermission:
+  Message: '[cbmfc-prefix]&c&l你没有此命令的权限!'
+  Enabled: true
+FakePlayers:
+  Enabled: true
+  Online:
+    Enabled: false
+    Count: 75
+  Max: 250
+MOTD:
+  Enabled: true
+  SwitchOnRefresh: false
+  Text:
+    '0': '          &e<3> &a&l&oSurvival &7&l&oNetwork&e <3> &7| &4[&c1.8-1.13&4][cbmfc-nextline]                      &c&l全新玩法!:
+      &a生存 &7- &cRPG &7- &e空岛'
+PlayerCountMessage:
+- '&7<0><0><0><0><0><0><0><0><0><0><0><0><0><0><0>'
+- '&7<0> &6&lTest Player Count &7<0>'
+- '&7<0><0><0><0><0><0><0><0><0><0><0><0><0><0><0>'
+Maintenance:
+  MOTD: '&e<3> &a&lplay.oriaspiration&7&l.&a&lcom&e <3> &7| &c&l维护中 [cbmfc-nextline]                        &6<9>&a&l服务器升级!'
+  Player: '&c&lMaintenance'
+  Join: '[cbmfc-prefix]&c服务器重载维护中! [cbmfc-nextline] &a&l请稍等几分钟后重试!'
+  PlayerCountMessage:
+  - '&7<0><0><0><0><0><0><0><0><0><0><0><0><0><0>'
+  - '&7<0> &c&l<10> 维护模式 <10> &7<0>'
+  - '&7<0><0><0><0><0><0><0><0><0><0><0><0><0><0>'
+MessageSystem:
+  Enabled: true
+  Disabled: '[cbmfc-prefix]&c全服消息系统已被禁用'
+  NotOnline: '[cbmfc-prefix]&c玩家 &e[player-off] &c不在线!'
+  Syntax: '&e[player-sender] &8-> &a[player-receiver]&8: &7[message]'
+  Monitor:
+    Enabled: true
+    Text: '&e[player-sender] &8send &a[player-receiver] &8following private: &7&8[message]'
+  DisplayName: true
+  Reply:
+    NoMessage: '[cbmfc-prefix]&c你没有需要回复的消息!'
+Party:
+  Help:
+  - ''
+  - '&c[]=================== [&b&lParty&c] &c===================[]'
+  - '&c/party create &7<9><9> &a创建一个队伍'
+  - '&c/party invite &e<player name> &7<9><9> &a邀请一个玩家进入队伍'
+  - '&c/party have &7<9><9> &a查询是否在一个队伍'
+  - '&c/party join &7<9><9> &a加入受邀队伍'
+  - '&c/party decline &7<9><9> &a拒绝队伍邀请'
+  - '&c/party leave &7<9><9> &a离开现在的队伍'
+  - '&c/party dissolve &7<9><9> &a解散队伍'
+  - '&c/party kick &e<player> &7<9><9> &a将该玩家从队伍中请出'
+  - '&c/party chat &e<message> &7<9><9> &a向所有队伍玩家发送一条消息'
+  - '&c&o/pc &e&o<message> &7&o<9><9> &c&o/party chat &e&o<message> &a&o的简便指令 '
+  - ''
+  - '&e- 队长需要加入一个服务器!'
+  - '&e- 只有创建者/队长可以邀请或'
+  - '&e  将玩家从队伍中请出!'
+  - '&c[]=================== [&b&lParty&c] &c===================[]'
+  JoinedServer: '&6[&bParty&6] &a队伍加入了一个服务器!'
+  JoinWithAllMembers: true
+  Dissolved: '&6[&bParty&6] &c&e[cbmfc-party-creator-name]将队伍解散!'
+  NoParty: '&6[&bParty&6] &c你没有队伍!'
+  Created: '&6[&bParty&6] &a队伍创建成功! [cbmfc-nextline]输入 /party invite &e<playername>
+    &a来邀请玩家进入队伍!'
+  AlreadyCreated: '&6[&bParty&6] &c队伍已经创建!'
+  Remove: '&6[&bParty&6] &a你的队伍被移除!'
+  NotCreator: '&6[&bParty&6] &c你不是队伍的创建者!'
+  Have: '&6[&bParty&6] &e你在队伍 &6[cbmfc-party-creator-name]&e! 中'
+  Leave: '&6[&bParty&6] &c你离开了队伍!'
+  LeaveInfo: '&6[&bParty&6] &e玩家 &6[cbmfc-player-name] &c离开了你的队伍!'
+  Join: '&6[&bParty&6] &a你加入了队伍 &6[cbmfc-party-creator-name]&a!'
+  JoinInfo: '&6[&bParty&6] &e玩家 &6[cbmfc-player-name] &a加入了你的队伍!'
+  DeclineInfo: '&6[&bParty&6] &e玩家 &6[cbmfc-player-name] &c拒绝了&e你的邀请!'
+  AlreadyInParty: '&6[&bParty&6] &c你已经在队伍中!'
+  NoInvite: '&6[&bParty&6] &c你没有收到任何队伍邀请!'
+  Invite:
+    Sent: '&6[&bParty&6] &a邀请已发送!'
+    Accept:
+      Text: '&2[Accept <13>]'
+      Hover: '&2点击这里同意邀请!'
+      Command: /party join
+    Decline:
+      Text: '&4[Deny <14>]'
+      Hover: '&4点击这里拒绝邀请!'
+      Command: /party decline
+    BeforeButtons: '&6[&bParty&6] &6[cbmfc-player-name] &a邀请你加入队伍! [cbmfc-nextline]
+      &a使用 '
+    AfterButtons: ' &a 来加入队伍!'
+    Old:
+      Use: false
+      Text: '&6[&bParty&6] &aYou got invited by &6[cbmfc-player-name] &ato join his
+        party! [cbmfc-nextline]&aUse &e/party join &ato accept the invite'
+  PlayerAlreadyInAParty: '&6[&bParty&6] &c该玩家已经在队伍中!'
+  Kicked: '&6[&bParty&6] &6[cbmfc-player-name] &c将你踢出!'
+  PlayerKicked: '&6[&bParty&6] &a该玩家被踢出!'
+  Chat:
+    Format: '&6[&bParty&6] &c[cbmfc-player-displayname] &8<9> &f[cbmfc-party-message]'
+    Enabled: '&6[&bParty&6] &e队伍聊天 &a开启 &e!'
+    Disabled: '&6[&bParty&6] &e队伍聊天 &c关闭 &e!'
+  NoChatMessage: '&6[&bParty&6] &c没有定义聊天消息!'
+  DisabledServers:
+  - NameOfDisabledServer
+Friend:
+  Help:
+  - '&c[]=================== [&2&lFriends&c] &c===================[]'
+  - '&c/friend &elist &7<9><9> &a显示所有好友'
+  - '&c/friend &eadd &b<player> &7<9><9> &a向一个玩家发送好友申请'
+  - '&c/friend &eremove &b<player> &7<9><9> &a将该玩家从好友列表移除'
+  - '&c/friend &eaccept &b<player> &7<9><9> &a接受好友申请'
+  - '&c/friend &edeny &b<player> &7<9><9> &a拒绝好友申请'
+  - '&c/friend &ejoin &b<player> &7<9><9> &a加入一个好友的服务器(如果可以)'
+  - '&c[]=================== [&2&lFriends&c] &c===================[]'
+  FriendList:
+    Header:
+    - '&c[]=========== &2&lFriends &c===========[]'
+    - ''
+    Footer:
+    - ''
+    - '&c[]=========== &2&lFriends &c===========[]'
+    Syntax:
+      Online: '&7<9><9> &e[cbmfc-player-friend] &7 - &a在线'
+      Offline: '&7<9><9> &e[cbmfc-player-friend] &7 - &c不在线'
+      NoFriend: '&7<9><9> &c没有好友'
+  UserNotOnline: '&c[&2Friend&c] &c玩家不在线!'
+  AlreadyFriends: '&c[&2Friend&c] &c该玩家已经是你的好友!'
+  NoFriends: '&c[&2Friend&c] &c此时你没有好友'
+  NotFriends: '&c[&2Friend&c] &c你跟申请玩家不是好友!'
+  Removed: '&c[&2Friend&c] &e好友&c移除!'
+  NoFriendInvite: '&c[&2Friend&c] &c该玩家未向你发送好友申请!'
+  Invite:
+    Sender: '&c[&2Friend&c] &a成功发送好友申请!'
+    Receiver: '&c[&2Friend&c] &6[cbmfc-player-name] &e向你发送了好友申请!'
+    Pending: '&c[&2Friend&c] &c已邀请该玩家,请耐心等待!'
+    Removed: '&c[&2Friend&c] &cOutstanding friend invite for that player removed!'
+  Accept: '&c[&2Friend&c] &e你 &a同意了 &e该玩家的申请!'
+  Accept_Info: '&c[&2Friend&c] &6[cbmfc-player-name] &a接受了 &e你的好友申请!'
+  Deny: '&c[&2Friend&c] &e你&c拒绝了&e好友申请!'
+  Deny_Info: '&c[&2Friend&c] &6[cbmfc-player-name] &c拒绝了&e你的好友申请!'
+  Server_Join:
+    Try: '&c[&2Friend&c] &e加入一个好友的服务器'
+    Error: '&c[&2Friend&c] &c服务器加入失败'
+  DisabledServers:
+  - NameOfDisabledServer
+Tablist:
+  Enabled: true
+  Header:
+  - '&c[&6&lCBMFC&c] &8| &a&lWorks fine&e!'
+  - '&6Also with multiple lines!'
+  - ''
+  - '&7&oThis header is visible to &7&o&lall'
+  - '&7&oservers on the network!'
+  - ''
+  Footer:
+  - ''
+  - '&2&lExample &e&lNetwork &8&l| &c&oJoin Now!'
+  - ''
+  - '&6IP: &8<9> &aYourNetwork.com'
+  - ''
+  - '&b&lSkype&7: ...'
+Commands:
+  Message: true
+  Party: true
+  Friends: true

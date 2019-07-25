@@ -1,0 +1,19 @@
+{
+  "uniqueId": "double_island",
+  "icon": "FURNACE",
+  "displayName": "§a双岛屿",
+  "description": [
+    "§b两个岛屿合二为一!",
+    "§6你能到达沙漠吗?",
+    "§a包含一个双岛屿",
+    "§c包含一个地狱空岛",
+    "§6包含一个末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "double",
+    "NETHER": "nether-island",
+    "THE_END": "end-island"
+  },
+  "slot": 1
+}

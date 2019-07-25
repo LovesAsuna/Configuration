@@ -1,0 +1,18 @@
+{
+  "uniqueId": "岩壁风情",
+  "icon": "COBBLESTONE",
+  "displayName": "§6岩壁风情",
+  "description": [
+    "§c岩壁风情!",
+    "§a包含一个岩壁风情",
+    "§c包含一个地狱空岛",
+    "§6包含一个末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "岩壁风情",
+    "NETHER": "nether-island",
+    "THE_END": "end-island"
+  },
+  "slot": 5
+}

@@ -1,0 +1,18 @@
+{
+  "uniqueId": "雪之梦",
+  "icon": "SNOW_BLOCK",
+  "displayName": "§6雪之梦",
+  "description": [
+    "§c雪之梦!",
+    "§a包含一个雪之梦",
+    "§c包含一个新地狱空岛",
+    "§6包含一个新末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "雪之梦",
+    "NETHER": "new-nether-island",
+    "THE_END": "new-end-island"
+  },
+  "slot": 11
+}

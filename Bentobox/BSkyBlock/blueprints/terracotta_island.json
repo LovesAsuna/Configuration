@@ -1,0 +1,18 @@
+{
+  "uniqueId": "terracotta_island",
+  "icon": "TERRACOTTA",
+  "displayName": "§6陶瓦空岛",
+  "description": [
+    "§c陶瓦空岛.物资缺乏!",
+    "§a包含一个陶瓦空岛",
+    "§c包含一个新地狱空岛",
+    "§6包含一个新末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "terracotta",
+    "NETHER": "new-nether-island",
+    "THE_END": "new-end-island"
+  },
+  "slot": 10
+}

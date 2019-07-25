@@ -1,0 +1,17 @@
+{
+  "uniqueId": "default",
+  "icon": "GRASS",
+  "displayName": "§e原始空岛",
+  "description": [
+    "§b标准岛屿,有一头牛 - moo!",
+    "§a包含一个原始空岛",
+    "§c包含一个地狱空岛",
+    "§6包含一个末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "island",
+    "NETHER": "nether-island",
+    "THE_END": "end-island"
+  }
+}

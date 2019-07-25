@@ -1,0 +1,18 @@
+{
+  "uniqueId": "default",
+  "icon": "PRISMARINE",
+  "displayName": "§e原始海岛",
+  "description": [
+    "§b一个原始海岛和一只羊 - baa!",
+    "§a包含一个原始海岛",
+    "§c包含一个地狱海岛",
+    "§6包含一个末地海岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "island",
+    "NETHER": "nether-island",
+    "THE_END": "end-island"
+  },
+  "slot": 2
+}

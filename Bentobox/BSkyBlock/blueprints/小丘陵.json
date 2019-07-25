@@ -1,0 +1,18 @@
+{
+  "uniqueId": "小丘陵",
+  "icon": "GRASS_BLOCK",
+  "displayName": "§6小丘陵",
+  "description": [
+    "§c小丘陵!",
+    "§a包含一个小丘陵",
+    "§c包含一个地狱空岛",
+    "§6包含一个末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "小丘陵",
+    "NETHER": "nether-island",
+    "THE_END": "end-island"
+  },
+  "slot": 6
+}

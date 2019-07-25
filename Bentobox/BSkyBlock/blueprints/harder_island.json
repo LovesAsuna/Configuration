@@ -1,0 +1,19 @@
+{
+  "uniqueId": "harder_island",
+  "icon": "SNOWBALL",
+  "displayName": "§4困难空岛",
+  "description": [
+    "§c难以生存.",
+    "§9小心岩浆!",
+    "§a包含一个困难空岛",
+    "§c包含一个新地狱空岛",
+    "§6包含一个新末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "harder",
+    "NETHER": "new-nether-island",
+    "THE_END": "new-end-island"
+  },
+  "slot": 12
+}

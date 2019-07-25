@@ -1,0 +1,18 @@
+{
+  "uniqueId": "llama_island",
+  "icon": "CHEST",
+  "displayName": "§5神兽空岛",
+  "description": [
+    "§d神兽空岛.有一神兽 - llama!",
+    "§a包含一个神兽空岛",
+    "§c包含一个地狱空岛",
+    "§6包含一个末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "llama",
+    "NETHER": "nether-island",
+    "THE_END": "end-island"
+  },
+  "slot": 7
+}

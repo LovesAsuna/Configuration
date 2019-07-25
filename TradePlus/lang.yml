@@ -1,0 +1,48 @@
+request:
+  sent: '&6&l(!) &r&6您向&e%PLAYER%&r&6发送了交易请求'
+  received:
+    text: '&6&l(!) &r&6您收到了来自&e%PLAYER%%NEWLINE%&r&6的交易请求&6&l(!) &r&6输入&e/trade %PLAYER%
+      &6开始交易'
+    hover: '&6&l点击这里与&e&l%PLAYER%&6&l交易'
+errors:
+  creative: '&4&l(!) &r&4你不能以创造模式进行交易!'
+  creative-them: '&4&l(!) &r&4该玩家处于创造模式!'
+  within-range:
+    same-world: '&4&l(!) &r&4你必须在与玩家相距%AMOUNT%个方块以内才能进行交易'
+    cross-world: '&4&l(!) &r&4你必须在不同世界与玩家相距%AMOUNT%个方块以内才能进行交易'
+  no-cross-world: '&4&l(!) &r&4你必须与玩家在同一个世界中进行交易!'
+  wait-for-expire: '&4&l(!) &r&4您仍然有一个有效的交易请求%NEWLINE%&4&l(!) &r&4它将很快到期'
+  player-not-found: '&4&l(!) &r&4找不到指定的玩家'
+  self-trade: '&4&l(!) &r&4你不能与自己交易'
+  invalid-usage: '&4&l(!) &r&4参数无效. 用法: %NEWLINE%    &c- /trade <玩家名称>%NEWLINE%    &c-
+    /trade deny'
+  no-perms:
+    accept: '&4&l(!) &r&4您没有接受交易权限'
+    send: '&4&l(!) &r&4您无权发送交易请求'
+    receive: '&4&l(!) &r&4该玩家无权接受交易'
+    admin: '&4&l(!) &r&4您无权使用此命令'
+accept:
+  sender: '&6&l(!) &r&e%PLAYER%&6接受了您的交易请求'
+  receiver: '&6&l(!) &r&6您接受了&e%PLAYER%的交易请求'
+cancelled: '&4&l(!) &r&4交易被取消了'
+expired: '&4&l(!) &r&4您的上一笔交易请求已过期'
+trade-complete: '&6&l(!) &r&6交易成功了!'
+forced-trade: '&6&l(!) &r&6你被迫与&e%PLAYER%&r&6进行交易'
+denied:
+  them: '&4&l(!) &r&4您对&c%PLAYER%&4的交易请求被拒绝'
+  you: '&4&l(!) &r&4最近收到的任何交易请求都被拒绝.'
+spectate:
+  message: '&6&l(!) &e%PLAYER1%&6和&e%PLAYER2%&6已开始交易%NEWLINE%&6&l(!) &6输入&e/tradeplus
+    spectate %PLAYER1% %PLAYER2% &6观看'
+  hover: '&6&l点击这里观看这笔交易'
+antiscam:
+  discrepancy: '&4&l(!) &r&4在交易项目中检测到差异.%NEWLINE%&4&l(!) &4该交易已被取消.'
+admin:
+  configs-reloaded: '&6&l(!) &6配置重新加载!'
+  invalid-players: '&4&l(!) &4无效的玩家!'
+  forced-trade: '&6&l(!) &6你强迫&e%PLAYER1%&6和&e%PLAYER2%&6进行交易'
+  players-only: '&4&l(!) &4此命令仅适用于玩家.'
+  no-trade: '&4&l(!) &4No trade was found with those arguments.'
+hooks:
+  factions:
+    enemy-territory: '&4&l(!) &4你不能在敌人的领土上交易!'

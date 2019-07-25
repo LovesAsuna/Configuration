@@ -1,0 +1,18 @@
+{
+  "uniqueId": "森林物语",
+  "icon": "PODZOL",
+  "displayName": "§6森林物语",
+  "description": [
+    "§c森林物语!",
+    "§a包含一个森林物语",
+    "§c包含一个地狱空岛",
+    "§6包含一个末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "森林物语",
+    "NETHER": "nether-island",
+    "THE_END": "end-island"
+  },
+  "slot": 3
+}

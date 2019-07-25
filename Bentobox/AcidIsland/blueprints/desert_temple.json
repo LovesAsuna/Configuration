@@ -1,0 +1,18 @@
+{
+  "uniqueId": "desert_temple",
+  "icon": "CACTUS",
+  "displayName": "&9沙漠神殿",
+  "description": [
+    "一个神秘的沙漠神殿岛屿",
+    "§a包含一个沙漠神殿",
+    "§c包含一个地狱海岛",
+    "§6包含一个末地海岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "temple",
+    "NETHER": "nether-island",
+    "THE_END": "end-island"
+  },
+  "slot": 5
+}

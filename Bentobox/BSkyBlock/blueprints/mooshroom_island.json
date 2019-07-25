@@ -1,0 +1,18 @@
+{
+  "uniqueId": "mooshroom_island",
+  "icon": "MYCELIUM",
+  "displayName": "§c蘑菇空岛",
+  "description": [
+    "§b蘑菇空岛.有一头蘑菇牛!",
+    "§a包含一个蘑菇空岛",
+    "§c包含一个新地狱空岛",
+    "§6包含一个新末地空岛"
+  ],
+  "requirePermission": false,
+  "blueprints": {
+    "NORMAL": "mooshroom",
+    "NETHER": "new-nether-island",
+    "THE_END": "new-end-island"
+  },
+  "slot": 8
+}
