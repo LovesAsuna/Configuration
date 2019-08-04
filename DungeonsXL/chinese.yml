@@ -81,11 +81,10 @@ Error_TutorialNotExist: '&4教程副本不存在!'
 Help_Cmd_Break: /dxl break - 打破副本保护的方块
 Help_Cmd_Chat: /dxl chat - 改变聊天模式
 Help_Cmd_Chatspy: /dxl chatspy - 开启/关闭 聊天监听
-Help_Cmd_Create: /dxl create [name] - 创建副本地图
-Help_Cmd_Delete: /dxl delete [name] - 删除副本地图
-Help_Cmd_DungeonItem: /dxl dungeonItem [true|false|info] - Sets the item stack in
-  the player's hand to be one that cannot be taken out of a dungeon
-Help_Cmd_Edit: /dxl edit [map] - 编辑副本地图
+Help_Cmd_Create: /dxl create [名称] - 创建副本地图
+Help_Cmd_Delete: /dxl delete [名称] - 删除副本地图
+Help_Cmd_DungeonItem: /dxl dungeonItem [true|false|info] - 把手中的物品设置为副本物品
+Help_Cmd_Edit: /dxl edit [地图名] - 编辑副本地图
 Help_Cmd_Enter: /dxl enter ([队伍1]) [队伍2] - 让队伍1进入队伍2的游戏
 Help_Cmd_Escape: /dxl escape - 放弃保存并离开编辑中的地图
 Help_Cmd_Game: /dxl game - 显示有关当前游戏会话的信息
@@ -97,36 +96,29 @@ Help_Cmd_GroupUninvite: /dxl group uninvite [玩家名] - 取消邀请玩家加�
 Help_Cmd_GroupJoin: /dxl group join [队伍名]- 加入一个队伍
 Help_Cmd_GroupKick: /dxl group kick [玩家名] - 移除一个队伍
 Help_Cmd_GroupShow: /dxl group show [队伍名] - 显示一个队伍
-Help_Cmd_Help: /dxl help [page] - 显示帮助信息
-Help_Cmd_Import: /dxl import [world] - 导入一个地图
+Help_Cmd_Help: /dxl help [页码] - 显示帮助信息
+Help_Cmd_Import: /dxl import [世界名] - 导入一个地图
 Help_Cmd_Invite: /dxl invite [玩家名] [副本名] - 邀请玩家编辑副本
 Help_Cmd_Join: /dxl join [announcement] - 打开GUI加入一个队伍进行游戏
-Help_Cmd_Kick: /dxl kick [player] - Kicks the player out of his group and dungeon
-Help_Cmd_Leave: /dxl leave - Leaves the current group and dungeon or edit world
-Help_Cmd_List: /dxl list ([dungeon|map|loaded]) ([dungeon]) - Lists all dungeons
-Help_Cmd_Lives: /dxl lives [player] - Shows the lives a player has left
-Help_Cmd_Main: /dxl - General status information
-Help_Cmd_Msg: /dxl msg [id] '[msg]' - Show or edit a message
-Help_Cmd_Play: /dxl play [name] - Allows the player to play a dungeon without a portal
-Help_Cmd_Portal: /dxl portal ([material=portal])- Creates a portal that leads into
-  a dungeon
-Help_Cmd_Reload: /dxl reload - Reloads the plugin
-Help_Cmd_Rename: /dxl rename [old name] [new name] - Changes the name of a map to
-  the new one. This command does NOT break dungeons that include this map.
-Help_Cmd_Rewards: /dxl rewards - Gives all left item rewards to the player
-Help_Cmd_ResourcePack: /dxl resourcepack [ID] - Downloads a resourcepack registered
-  in the main configuration file; use 'reset' to reset
-Help_Cmd_Save: /dxl save - Saves the current dungeon
-Help_Cmd_Status: /dxl status - Shows the technical status of DungeonsXL
-Help_Cmd_Settings: /dxl settings ([edit|global|player])- Opens the settings menu
-Help_Cmd_Test: /dxl test - Starts the game in test mode
-Help_Cmd_Uninvite: /dxl uninvite [player] [dungeon] - Uninvite a player to edit a
-  dungeon
-Help_DungeonItem: '&6After finishing a game, &4dungeon items &6are removed from the
-  player''s inventory even if the respective dungeon setup in general allows to keep
-  it.'
-Help_GlobalItem: '&6After finishing a game, &4global items &6can be taken out of dungeons
-  if the respective dungeon setup in general allows to keep the inventory.'
+Help_Cmd_Kick: /dxl kick [玩家名] - 将玩家踢出组队以及副本
+Help_Cmd_Leave: /dxl leave - 离开当前组队以及副本或编辑世界
+Help_Cmd_List: /dxl list ([dungeon|map|loaded]) ([副本名]) - 显示所有副本
+Help_Cmd_Lives: /dxl lives [玩家名] - 显示玩家剩余的生命
+Help_Cmd_Main: /dxl - 显示插件信息
+Help_Cmd_Msg: /dxl msg [id] '[msg]' - 显示或编辑信息
+Help_Cmd_Play: /dxl play [副本名] - 玩家直接进入副本
+Help_Cmd_Portal: /dxl portal ([material=portal])- 创造一个进入副本的传送门
+Help_Cmd_Reload: /dxl reload - 重载插件
+Help_Cmd_Rename: /dxl rename [old name] [new name] - 改变副本名称. 本命令不会破坏地图.
+Help_Cmd_Rewards: /dxl rewards - 给予玩家所有的副本奖励
+Help_Cmd_ResourcePack: /dxl resourcepack [ID] - 下载资源包
+Help_Cmd_Save: /dxl save - 保存当前副本
+Help_Cmd_Status: /dxl status - 显示副本插件的技术参数
+Help_Cmd_Settings: /dxl settings ([edit|global|player])- 打开编辑菜单
+Help_Cmd_Test: /dxl test - 以测试模式运行副本
+Help_Cmd_Uninvite: /dxl uninvite [玩家名] [dungeon] - 取消邀请玩家编辑副本
+Help_DungeonItem: '&6完成游戏后,&4副本物品&6将从玩家的背包中移除.'
+Help_GlobalItem: '&6完成游戏后,&4世界物品&6可以保留在玩家的背包里.'
 Group_BedDestroyed: '&6队伍&4&v1&6的床被&4&v2&6摧毁了!'
 Group_Congrats: '&6大吉大利!'
 Group_CongratsSub: '&l&4你的队伍&v1&4获得了胜利!'
@@ -136,85 +128,77 @@ Group_DeathKick: '&4&v1&6被移除,因为&4&v2&6无人存活.'
 Group_Defeated: '&4队伍&4v1&6因为失去了最后一分而失败了.'
 Group_Disbanded: '&4&v1&6解散了队伍&4&v2&6.'
 Group_FlagCaptured: '&4&v1&6抢夺了队伍&4&v2&6的旗帜!'
-Group_FlagLost: '&4&v1&6 died and lost &4&v2&6''s flag.'
-Group_FlagStealing: '&4&v1&6 is stealing the flag of the group &4&v2&6!'
-Group_InvitedPlayer: '&4&v1&6 invited the player &4&v2&6 to the group &4&v3&6.'
-Group_JoinedGame: '&6Your group successfully joined the game.'
-Group_Killed: '&4&v1 &6was killed by &4&v2&6. &4&v3&6 have &4&v4 &6lives left.'
-Group_KilledKick: '&4&v1&6 was killed by &4&v2&6. &4&v3 have no lives left.'
-Group_LivesAdded: '&6Your group received a bonus of &4&v1&6 lives.'
-Group_LivesRemoved: '&6Your group lost &4&v1&6 lives!'
-Group_UninvitedPlayer: '&4&v1&6 took back the invitation for &4&v2&6 to the group
-  &4&v3&6.'
-Group_KickedPlayer: '&4&v1&6 kicked the player &4&v2&6 from the group &4&v3&6.'
-Group_PlayerJoined: '&6Player &4&v1&6 has joined the group!'
+Group_FlagLost: '&4&v1&6因为死亡而丢失了&4&v2&6的旗帜.'
+Group_FlagStealing: '&4&v1&6正在夺取队伍&4&v2&6的旗帜!'
+Group_InvitedPlayer: '&4&v1&6邀请了玩家&4&v2&6加入队伍&4&v3&6.'
+Group_JoinedGame: '&6你的队伍成功加入游戏.'
+Group_Killed: '&4&v1 &6被&4&v2&6击杀. &4&v3&6剩余&4&v4&6人存活.'
+Group_KilledKick: '&4&v1&6被&4&v2&6击杀. &4&v3无人存活.'
+Group_LivesAdded: '&6你的队伍获得&4&v1&6存活的奖励.'
+Group_LivesRemoved: '&6你队伍失去了&4&v1&6条生命!'
+Group_UninvitedPlayer: '&4&v1&6收回了对玩家&4&v2&6加入队伍&4&v3&6的邀请.'
+Group_KickedPlayer: '&4&v1&6从队伍&4&v3&6中踢出了玩家&4&v2&6.'
+Group_PlayerJoined: '&6玩家&4&v1&6加入了队伍!'
 group:
-  rewardChest: '&6Your group has found a reward chest.'
-Group_WaveFinished: '&6Your group finished wave no. &4&v1&6. The next one is going
-  to start in &4&v2&6 seconds.'
-Log_Error_DungeonSetup: '&4The setup of dungeon &6&v1&4 is incorrect. See https://github.com/DRE2N/DungeonsXL/wiki/dungeon-configuration
-  for reference.'
-Log_Error_MobEnchantment: '&4An error occurred while loading mob.yml: Enchantment
-  &6&v1&4 doesn''t exist!'
-Log_Error_MobType: '&4Error at loading mob.yml: Mob &6&v1&4 doesn''t exist!'
-Log_Error_NoConsoleCommand: '&6/dxl &v1&4 can not be executed as console!'
-Log_Error_SignSetup: '&4A sign at &6&v1&4 is erroneous!'
-Log_GenerateNewWorld: '&6Generating new world...'
-Log_ImportWorld: '&6Importing world...'
-Log_KilledCorruptedPlayer: '&4Killed player &6&v1 &4because the data to restore his
-  main inventory is corrupted :('
-Log_NewDungeon: '&6Creating new map.'
-Log_NewPlayerData: '&6A new player data file has been created and saved as &v1.'
-Log_WorldGenerationFinished: '&6World generation finished!'
-Misc_NextPage: '&6&lNEXT PAGE'
+  rewardChest: '&6你的队伍找到了宝箱.'
+Group_WaveFinished: '&6你队伍击败了第&4&v1&6波怪物.下一波怪物将在&4&v2&6秒后出现.'
+Log_Error_DungeonSetup: '&4副本设置错误. 请查看 https://github.com/DRE2N/DungeonsXL/wiki/dungeon-configuration.'
+Log_Error_MobEnchantment: '&4在载入怪物文件时发生错误: 附魔 &6&v1&4 不存在!'
+Log_Error_MobType: '&4在载入怪物文件时发生错误: 怪物 &6&v1&4 不存在!'
+Log_Error_NoConsoleCommand: '&6/dxl &v1&4无法用于控制台执行!'
+Log_Error_SignSetup: '&6&v1&4的牌子是错误的!'
+Log_GenerateNewWorld: '&6生成新的世界中...'
+Log_ImportWorld: '&6导入地图中...'
+Log_KilledCorruptedPlayer: '&4清除玩家&6&v1 &4因为恢复主要背包的数据已损坏 :('
+Log_NewDungeon: '&6创建新的地图中.'
+Log_NewPlayerData: '&6已创建新的玩家数据文件并将其另存为&v1.'
+Log_WorldGenerationFinished: '&6世界生成成功!'
+Misc_NextPage: '&6&l下一页'
 Misc_No: '&4[ NO ]'
 Misc_Okay: '&a[ OK ]'
-Misc_PreviousPage: '&6&lPREVIOUS PAGE'
-Misc_Unlimited: unlimited
+Misc_PreviousPage: '&6&l上一页'
+Misc_Unlimited: 无限
 Misc_Yes: '&a[ YES ]'
-Player_BlockInfo: '&6Block ID: &2&v1'
-Player_CheckpointReached: '&6Checkpoint reached!'
-Player_Death: '&4&v1 &6died and has &4&v2 &6lives left.'
-Player_DeathKick: '&2&v1 &6lost his last life and was kicked.'
-Player_FinishedDungeon: '&6You successfully finished the dungeon!'
-Player_Finished_Floor: '&6You successfully finished the floor.'
-Player_Invited: '&4&v1&6 invited you to the group &4&v2&6.'
-Player_Uninvited: '&4&v1&6 took back your invitation to the group &4&v2&6.'
-Player_JoinGroup: '&6You successfully joined the group!'
-Player_Kicked: '&4You have been kicked out of the group &6&v1&4.'
-Player_Killed: '&4&v1 &6was killed by &4&v2 &6and has &4&v3 &6lives left.'
-Player_KilledKick: '&4&v1&6 was killed by &4&v2 &6and lost his last life.'
-Player_LeaveGroup: '&6You have successfully left your group!'
-Player_LeftGroup: '&6Player &4&v1&6 has left the Group!'
-Player_LivesAdded: '&6Received a bonus of &4&v1&6 lives.'
-Player_LivesRemoved: '&6You lost &4&v1&6 lives!'
-Player_LootAdded: '&4&v1&6 have been added to your reward inventory!'
-Player_NewCaptain: '&6You are now the new captain of your group.'
-Player_Offline: '&Player &4&v1&6 went offline. In &4&v2&6 seconds he will autmatically
-  be kicked from the dungeon!'
-Player_OfflineNever: '&6The player &4&v1&6 went offline. He will &4not&6 be kicked
-  from the dungeon automatically!'
-Player_PortalAbort: '&6Portal creation cancelled!'
-Player_PortalIntroduction: '&6Click the two edges of the portal with the wooden sword!'
-Player_PortalCreated: '&6Portal created!'
-Player_PortalProgress: '&6First edge successfully marked. You may now click at the
-  other edge.'
-Player_ProtectedBlockDeleted: '&6Successfully removed the protection.'
-Player_Ready: '&6You are now ready to start the dungeon.'
-Player_SignCreated: '&6Successfully created a dungeon sign.'
-Player_SignCopied: '&6Sign data copied.'
-Player_TimeLeft: '&v1You have &6&v2 &v1seconds left to finish the dungeon!'
-Player_TimeKick: '&2&v1&6''s time expired.'
-Player_Treasures: '&1Treasures'
-Player_WaitForOtherPlayers: '&6Waiting for team members...'
-Requirement_Fee: '&6You have been charged &4&v1 &6for entering the dungeon.'
-Reward_General: '&6You received &4&v1 &6for finishing the dungeon.'
-Settings_Announcements1: '&fToggles personal'
-Settings_Announcements2: '&fgame announcements.'
-Settings_Break1: '&fAllows you to break blocks'
-Settings_Break2: '&fprotected by DungeonsXL.'
-Settings_ChatSpy1: '&fAllows you to receive'
-Settings_ChatSpy2: '&fall dungeon chat messages.'
+Player_BlockInfo: '&6方块ID: &2&v1'
+Player_CheckpointReached: '&6已到达检查点!'
+Player_Death: '&4&v1&6已经死亡,剩余 &4&v2 &6生命.'
+Player_DeathKick: '&2&v1&6已经死亡,被踢出副本.'
+Player_FinishedDungeon: '&6你成功完成当前副本!'
+Player_Finished_Floor: '&6你成功完成当前关卡.'
+Player_Invited: '&4&v1&6邀请你加入队伍&4&v2&6.'
+Player_Uninvited: '&4&v1&6取消了对你加入队伍&4&v2&6的邀请.'
+Player_JoinGroup: '&6成功加入队伍!'
+Player_Kicked: '&4你被移出了队伍&6&v1&4.'
+Player_Killed: '&4&v1 &6被 &4&v2 &6击杀了,剩余 &4&v3 &6生命.'
+Player_KilledKick: '&4&v1&6 被 &4&v2 &6击杀了并且失去了生命.'
+Player_LeaveGroup: '&6成功离开队伍!'
+Player_LeftGroup: '&6玩家 &4&v1&6 离开了队伍!'
+Player_LivesAdded: '&6获得了剩余 &4&v1&6 生命的奖励.'
+Player_LivesRemoved: '&6你失去了 &4&v1&6 生命!'
+Player_LootAdded: '&4&v1&6 被加入了你的奖励箱!'
+Player_NewCaptain: '&6你现在是队伍的队长了.'
+Player_Offline: '&玩家 &4&v1&6 离线了. 在 &4&v2&6 秒后将被踢出副本!'
+Player_OfflineNever: '&6玩家 &4&v1&6 离线了. 但是他不会被系统自动移除副本!'
+Player_PortalAbort: '&6传送门创建被取消!'
+Player_PortalIntroduction: '&6使用木剑点击门的两个角!'
+Player_PortalCreated: '&6传送门已经被创建!'
+Player_PortalProgress: '&6第一个角已选取.请选取第二个角.'
+Player_ProtectedBlockDeleted: '&6成功移除保护.'
+Player_Ready: '&6你已经准备好了.'
+Player_SignCreated: '&6成功创建副本牌子.'
+Player_SignCopied: '&6成功复制牌子信息.'
+Player_TimeLeft: '&v1你还有 &6&v2 &v1秒去完成这个副本!'
+Player_TimeKick: '&2&v1&6时间耗尽.'
+Player_Treasures: '&1宝藏'
+Player_WaitForOtherPlayers: '&6等待队伍成员...'
+Requirement_Fee: '&6你花费了&4&v1&6金币进入副本.'
+Reward_General: '&6完成了副本,你获得了&4&v1&6.'
+Settings_Announcements1: '&f切换个人'
+Settings_Announcements2: '&f游戏公告.'
+Settings_Break1: '&f允许你破坏被副'
+Settings_Break2: '&f本保护的方块.'
+Settings_ChatSpy1: '&f允许你监听'
+Settings_ChatSpy2: '&副本聊天.'
 Settings_Title: '&4设置: &o'
 Settings_Title_Edit: 副本设置
 Settings_Title_Global: 全局设置
