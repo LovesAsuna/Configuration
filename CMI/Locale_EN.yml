@@ -454,144 +454,210 @@ info:
     zombie_villager: 僵尸村民
   EnchantAliases:
     protection_fire:
+    - 火焰保护
     - FireProtection
     damage_all:
+    - 锋利
     - Sharpness
     arrow_fire:
+    - 火矢
     - Flame
     water_worker:
+    - 水下速掘
     - AquaAffinity
     arrow_knockback:
+    - 冲击
     - Punch
     loyalty:
+    - 忠诚
     - LOYALTY
     depth_strider:
+    - 深海探索者
     - DepthStrider
     vanishing_curse:
+    - 消失诅咒
     - VanishingCurse
     durability:
+    - 耐久
     - Unbreaking
     knockback:
+    - 击退
     - Knockback
     luck:
+    - 海之眷顾
     - Luck
     binding_curse:
+    - 绑定诅咒
     - BindingCurse
     loot_bonus_blocks:
+    - 时运
     - Fortune
     protection_environmental:
+    - 保护
     - Protection
     dig_speed:
+    - 效率
     - Efficiency
     mending:
+    - 经验修补
     - Mending
     frost_walker:
+    - 冰霜行者
     - FrostWalker
     lure:
+    - 饵钓
     - Lure
     loot_bonus_mobs:
+    - 抢夺
     - Looting
     piercing:
+    - 穿透
     - PIERCING
     protection_explosions:
+    - 爆炸保护
     - BlastProtection
     damage_undead:
+    - 亡灵杀手
     - Smite
     multishot:
+    - 多重射击
     - MULTISHOT
     fire_aspect:
+    - 火焰附加
     - FireAspect
     channeling:
+    - 引雷
     - CHANNELING
     sweeping_edge:
+    - 横扫之刃
     - SweepingEdge
     thorns:
+    - 荆棘
     - Thorns
     damage_arthropods:
+    - 节肢杀手
     - BaneOfArthropods
     oxygen:
+    - 水下呼吸
     - Respiration
     riptide:
+    - 激流
     - RIPTIDE
     silk_touch:
     - SilkTouch
     quick_charge:
+    - 快速装填
     - QUICKCHARGE
     protection_projectile:
+    - 弹射物保护
     - ProjectileProtection
     impaling:
-    - IMPALING
+    - 穿刺
     protection_fall:
-    - FallProtection
+    - 摔落保护
     - FeatherFalling
     arrow_damage:
+    - 力量
     - Power
     arrow_infinite:
+    - 无限
     - Infinity
   PotionEffectAliases:
     speed:
+    - 速度
     - speed
     slow:
+    - 缓慢
     - slow
     fast_digging:
+    - 击破
     - fast_digging
     slow_digging:
+    - 挖掘疲劳
     - slow_digging
     increase_damage:
+    - 力量
     - increase_damage
     heal:
+    - 瞬间治疗
     - heal
     harm:
+    - 瞬间伤害
     - harm
     jump:
+    - 跳跃提升
     - jump
     confusion:
+    - 反胃
     - confusion
     regeneration:
+    - 生命恢复
     - regeneration
     damage_resistance:
+    - 抗性提升
     - damage_resistance
     fire_resistance:
+    - 防火
     - fire_resistance
     water_breathing:
+    - 水下呼吸
     - water_breathing
     invisibility:
+    - 隐身
     - invisibility
     blindness:
+    - 失明
     - blindness
     night_vision:
+    - 夜视
     - night_vision
     hunger:
+    - 饥饿
     - hunger
     weakness:
+    - 虚弱
     - weakness
     poison:
+    - 中毒
     - poison
     wither:
+    - 凋零
     - wither
     health_boost:
+    - 生命提升
     - health_boost
     absorption:
+    - 伤害吸收
     - absorption
     saturation:
+    - 饱和
     - saturation
     glowing:
+    - 发光
     - glowing
     levitation:
+    - 漂浮
     - levitation
     luck:
+    - 幸运
     - luck
     unluck:
+    - 霉运
     - unluck
     slow_falling:
+    - 缓降
     - Slow falling
     conduit_power:
+    - 潮涌能量
     - Conduit power
     dolphins_grace:
+    - 海豚的恩惠
     - Dolphins grace
     bad_omen:
+    - 不祥之兆
     - Bad omen
     hero_of_the_village:
+    - 村庄英雄
     - Hero of the village
 direction:
   n: North
@@ -1325,7 +1391,7 @@ command:
   effect:
     help:
       info: '&e给玩家添加药水效果，使用clear来清除所有药水效果'
-      args: '[玩家名称] [effect/clear] (时长) (multiplier) (-s)'
+      args: '[玩家名称] [effect/clear] (时长) (药水等级) (-s)'
       explanation:
       - -visual 将在右上角加上可见气泡和图标
       - '示例:'
@@ -3019,7 +3085,7 @@ command:
   scavenge:
     help:
       info: '&e分解物品及其附魔'
-      args: '(玩家名)'
+      args: (玩家名)
     info:
       enchantWorth: '&e附魔价值: &7[price]'
       enchantFailChance: '&4失败几率: &7[chance]%'
@@ -3030,7 +3096,7 @@ command:
       itemBroke: '&c该物品有 [chance]% 的报废几率'
       confirm: '&2确认分解. 花费: &c[price]'
       itemBreakChance: '&c物品报废几率: [chance]%'
-      itemBreakChanceExtra: '耐久度:&c[durability]% 增加了 [chance]% 报废几率'
+      itemBreakChanceExtra: 耐久度:&c[durability]% 增加了 [chance]% 报废几率
       itemBreak: '&c物品将在点击后被破坏!'
       ingredientReturnChance: '&7成分回归几率: [chance]%'
       cantScavenge: '&c不可分解'
