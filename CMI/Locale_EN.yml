@@ -73,6 +73,7 @@ info:
   TeamManagementDisabled: '&7当DisableTeamManagement设置为true时,此功能将只有有限的功能!'
   ModuleNotEnabled: '&cThis module is not enabled!'
   versionNotSupported: '&c服务器版本不支持此特性'
+  bungeeNoGo: '&c该功能将不会在处于bc网络下的服务器上启用'
   clickToTeleport: '&e点击传送'
   UseMaterial: '&4请使用物品名字!'
   UseInteger: '&4请使用数字'
@@ -140,9 +141,15 @@ info:
   flyingToHigh: '&c你不能再飞得更高了, 最大高度限制是 &6[max]&c!'
   specializedItemFail: '&c无法根据物品数量值:&7[value]确定具体物品'
   sunSpeeding: Sleeping [count] of [total] [hour] hour [speed]X speed
+  sleepersRequired: '&f[sleeping] &7of &f[required] &7sleeping from required for night
+    time speedup'
   sunSpeedingTitle: '&7[hour]'
   sunSpeedingSubTitle: '&f[count]&7/&f[total] &7(&f[speed]X&7)'
+  repairConfirm: '&e点击确认花费&7[cost]来修复&e物品&7[items]'
+  bookDate: '&7撰写于 &f[date]'
+  maintenance: '&7维护模式'
   notSet: 未设置
+  mapLimit: '&c不可以超出 30 000 000 的范围'
   startedEditingPainting: '&e开始画布编辑，点击其它方块取消'
   canceledEditingPainting: '&e你取消了画布编辑'
   changedPainting: '!actionbar!&e将画布更名为 &6[name] &eID为 &6[id]'
@@ -1119,6 +1126,13 @@ command:
     help:
       info: '&e清空玩家背包'
       args: (玩家名称) (-s)
+      explanation:
+      - '可选的清除类型: quickbar, inventory, partinventory, weapons, armorslots,
+        tools, armors, mainhand, offhand'
+      - 需要以 + sign 开头
+      - 可选择多种类型
+      - cmi clear +armors - 会清除装甲类的物品
+      - cmi clear +armorslots - 会清除装备栏中的物品
     info:
       feedback: '&e你清空了玩家 &3[playerDisplayName]&e 的背包 (&3[offon]&e).'
       targetfeedback: '&e你的背包被 &3[senderDisplayName]&e 清空了'
@@ -1236,6 +1250,12 @@ command:
       thisyear: '&7本年'
       year: '&7365 天内'
       total: '&7总计'
+  ctellraw:
+    help:
+      info: '&e发送 tellraw 类型的信息'
+      args: '[playerName/all] [tellraw格式的信息]'
+      explanation:
+      - 使用方法与 http://www.zrips.net/cmi/custom-text/中的相同
   ctext:
     help:
       info: '&e显示自定义内容'
@@ -1254,6 +1274,7 @@ command:
       unCuffed: '&6[playerDisplayName] &e不再是限制状态'
       free: '&e你自由了，不再受任何限制'
       gotCuffed: '&e你现在受到了管理员的限制'
+      cuffedInfo: '&eYou are cuffed'
       cantCuff: '&c你不能限制这个玩家!'
   customrecipe:
     help:
@@ -1288,6 +1309,12 @@ command:
       args: (玩家名称)
     info:
       title: '&c请放入所有不需要的垃圾'
+  distance:
+    help:
+      info: '&e显示两点之间的距离'
+      args: (playerName) (playerName)
+    info:
+      feedback: '&7距离: &e[dist] &7x:&e[x] &7y:&e[y] &7z:&e[z] &7方向:&e[dir]'
   donate:
     help:
       info: '&e捐赠持有物品'
@@ -1329,6 +1356,8 @@ command:
     info:
       color: '&e当前颜色 - &c[red],&2[green],&9[blue] &eHex:&6#[hex]'
       custom: '&e启用自定义颜色模式： &6[mode]'
+      bound: '&e灵魂绑定: &6'
+      boundName: '[playerName]'
   editctext:
     help:
       info: '&e自定义文字编辑'
@@ -1418,6 +1447,7 @@ command:
       clearedInvalid: '&eRemoved &6[amount] &einvalid enchantments from item'
       inccorectId: '&e无效的附魔名称或者ID'
       wrongItem: '&eWrong item in your hand'
+      enchantlimit: '&c你没有此类型附魔的权限'
       levellimit: '&c附魔等级太高，最高等级不能超过 &e[level].'
       posible: '&e可行的附魔: '
       posibleList: '&6[enchant]'
@@ -1741,6 +1771,10 @@ command:
       intervalLore:
       - '&7每多少秒让动态悬浮字更新一次'
       - '&7如果是静态悬浮字请设置为 -1'
+      pageInterval: '&7每 &6[second] &7秒翻下一页'
+      pageIntervalLore:
+      - '&7有多频繁, 以秒为间隔, hologram page动态的改变'
+      pageIntervalNoPages: '&4这 hologram 还没有设置内容'
       text: '&7字符间距 &6[space]'
       usync: '&7文本同步更改: &6[state]'
       reqPermission: '&7Requires permission to see: &6[state]'
@@ -2024,6 +2058,7 @@ command:
       realName: ' &e物品真名: &6[name]'
       bukkitName: ' &eBukkit 名称: &6[name]'
       mojangName: ' &eMojang 名称: &6[name]'
+      entityType: ' &e实体 类型: &6[type]'
       durability: ' &e耐久: &6[current]&e/&6[max]'
   itemlore:
     help:
@@ -2062,7 +2097,7 @@ command:
     info:
       jailed: '&e你将玩家 &6[playerDisplayName] &e关进了监狱，持续 [time]'
       jailedPlayer: '&6[playerDisplayName] &e被关进了监狱，持续 [time]'
-      reasson: ' &e原因: &c[reasson]'
+      reason: ' &e原因: &c[reason]'
       leftTime: '!title!&7服刑时间:!subtitle![time]'
       jailedTarget: '&e你被关进监狱了! [time]'
       cantTalk: '&c闭嘴！在监狱里不许说话！'
@@ -2081,6 +2116,7 @@ command:
       exist: '&c叫这个名字的监狱已存在'
       createdJail: '&e成功创建新监狱 (&6[jail]&e)'
       createdCell: '&e成功创建监狱里的新牢房 (&6[jail]&e:&6[cellId]&e)'
+      collides: '&c与名为 &6[jailName] &e的监狱冲突'
       jailList: '&e[place]. &6[jail] &e牢房:&6[cells] &e犯人: &6[amount]    '
       editCells: '&e编辑牢房列表'
       cellList: '&e牢房 id:&6[id] &e犯人: &6[amount]    '
@@ -2163,6 +2199,8 @@ command:
       noFoundKit: '&e无任何礼包，请先创建一个'
       givenKit: '&e你将礼包 &6[kit] &e给予了 &6[playerDisplayName]'
       title: '&8礼包'
+      nameCanUse: '&6[kitName]'
+      nameCantUse: '&7[kitName]'
       group: '&e组: &6[group]'
       left: '&6左键 &e点击使用'
       right: '&6右键 &e点击预览'
@@ -2511,6 +2549,7 @@ command:
       SenderMsg: '&7[&8我 &7-> &8[playerDisplayName]&7]&r&f [message]'
       consoleMsg: '[[senderDisplayName] -> [playerDisplayName]] [message]'
       noPM: '&c玩家现在不接受私人消息'
+      badGroup: '&c不可以向此权限组中的玩家发送私人消息'
   msgtoggle:
     help:
       info: '&e切换私人消息状态'
@@ -2630,6 +2669,7 @@ command:
     info:
       feedback: '&ePing: &6[ping]'
       selffeedback: '&eYour ping is &6[ping]ms'
+      customMessage: '[message]'
   placeholders:
     help:
       info: '&e显示所有占位符'
@@ -2897,6 +2937,8 @@ command:
       - cmi.command.repair.repairshare.bypass - 不添加共享修复保护地修复物品
     info:
       feedback: '&e成功修理了 &3[amount]&e 件物品，被操作玩家 &3[playerDisplayName]&e (&3[offon]&e).'
+      feedbackMoney: '&e你需要 &3[amount]&e 个物品来 &3[playerDisplayName]&e
+        (&3[offon]&e). Cost: &7[cost]'
       itemOwner: '&e上一次修复由: &6[owner]'
       cantUse: '!title!&c你不能使用这个!subtitle!&e请自己修理这个!'
   repaircost:
@@ -3156,8 +3198,6 @@ command:
       args: '[玩家名称/uuid]'
     info:
       feedback: '&6[playerDisplayName] &e上一次 &6[offon] &e是在 &6[time]'
-      online: '&6在线'
-      offline: '&6离线'
   sell:
     help:
       info: '&e从背包里出售物品'
@@ -3626,12 +3666,6 @@ command:
     info:
       feedbackDisabled: '&e禁用艾特音效'
       feedbackEnabled: '&e启用艾特音效'
-  tellraw:
-    help:
-      info: '&e发送 tellraw 类型的消息'
-      args: '[playerName/all] [formattedMessage]'
-      explanation:
-      - 使用方法与 http://www.zrips.net/cmi/custom-text/ 中的aka 自定义文本命令类似
   tempban:
     help:
       info: '&e暂时封禁玩家'
@@ -3957,9 +3991,15 @@ command:
       info: '&e将玩家解除禁言'
       args: '[玩家名称] (-s)'
     info:
-      notMuted: '&ePlayer is not muted'
-      unmuted: '&ePlayer can talk now'
-      unmutedTarget: '&eYou can talk now'
+      notMuted: '&e该玩家并未被禁言'
+      unmuted: '&e该玩家现在可以说话'
+      unmutedTarget: '&e现在你可以说话了'
+  unmutechat:
+    help:
+      info: '&e取消公共频道的聊天禁言'
+      args: (-s)
+    info:
+      unmuted: '&eUnmuted public chat'
   usermeta:
     help:
       info: '&e设置玩家的 meta data'
