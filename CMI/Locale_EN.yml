@@ -865,7 +865,7 @@ command:
       aliasName: ' &6[alias]   '
       commandList: ' &e/[command]  '
       commandListDelay: ' &6[command]  '
-      permReq: '&需要自定义权限: &6[state]'
+      permReq: '&e需要自定义权限: &6[state]'
       permReqExplanation: '&7需要权限 &6cmi.customalias.[alias] &7来使用'
       newAliasInfo: '&e输入新的命令别名,然后按Enter键'
       addInfo: '&e输入新的指令，或者输入 &6cancel &e取消'
