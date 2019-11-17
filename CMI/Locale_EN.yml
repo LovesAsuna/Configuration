@@ -870,7 +870,7 @@ command:
       newAliasInfo: '&e输入新的命令别名,然后按Enter键'
       addInfo: '&e输入新的指令，或者输入 &6cancel &e取消'
       addInformationHover: "&e全服变量支持 \n&e想给指令添加延迟: \n&edelay! 5 \n&e新增的变量可用于根据输入的位\
-        置插入变量 \n&e$1 将获得新指令提供的变量并将其放在相应位置 \n&e$1- 将从这一处获得所有 变量并将其插入原指令 \n&efromConsole!\
+        置插入变量 \n&e$1 将获得新指令提供的变量并将其放在相应位置 \n&e$1- 将从这一处获得所有变量并将其插入原指令 \n&efromConsole!\
         \ 将在控制台执行指令"
       editInfo: '&e点击粘贴旧内容，或者输入 &6cancel &e来取消，或者输入 &6remove &e来移除一行'
   armorstand:
