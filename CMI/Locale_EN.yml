@@ -2604,7 +2604,7 @@ command:
       - '改变昵称: cmi.command.nick.different'
       - 无视昵称长度限制 cmi.command.nick.bypass.length
     info:
-      changed: '&e昵称已改变为 &r[newNickName] &e，旧昵称是 &r[oldNickName]'
+      changed: '&e昵称已改变为&r[newNickName] &e，旧昵称是&r[oldNickName]'
       changedTarget: '&e你的昵称&e被 &r[senderDisplayName] 改为 &r[newNickName]'
       reset: '&e昵称已还原为默认'
       sameNick: '&c你不能改变你的昵称，你能做的只有改变昵称的颜色'
