@@ -39,7 +39,7 @@
 # Some lines supports option to send them to custom places, like action bar, title, sub title or even create JSON/clickable messages
 # If line starts with !toast! then player will get toast message (advancement popup, only 1.12 and up). Some extra variables can be used to define type and icon. example: !toast! -t:goal -icon:paper Hello world!
 # If line starts with !actionbar! then player will get action bar message defined after this variable
-# If line starts with !broadcast! then everyone will receive message
+# If line starts with !broadcast! then everyone will receive message. You can add extra !toast! !actionbar! or !title! to send message for everyone to specific place, in example !broadcast!!title!
 # If line starts with !customtext:[cTextName]! then custom text will be taken by name provided and shown for player. In case its used after !broadcast! then everyone who is online will get this custom text message
 # If line starts with !title! then player will get title message defined after this variable, in addition it can contain !subtitle! which will add subtitle message
 # To include clickable messages: <T>Text</T><H>Hover text</H><C>command</C><SC>Suggested text</SC>
@@ -127,6 +127,7 @@ info:
   noItem: '&c找不到物品'
   dontHaveItem: '&c你的背包中没有 &6[itemName] x[amount] &c'
   wrongWorld: '&c不可在此世界这样做'
+  differentWorld: '&c不同的世界'
   HaveItem: '&c在背包里有&6[amount]x [itemName]'
   ItemWillBreak: '!actionbar!&e你的物品 (&6[itemName]&e) 马上快要爆了 &e[current]&6/&e[max]'
   cantDoForPlayer: '&e你不能对 &6[playerDisplayName] &e这么做'
@@ -234,6 +235,7 @@ info:
   lastPageHover: '&7>|'
   pageCount: '&2[current]&7/&2[total]'
   pageCountHover: '&2[totalEntries]'
+  skullOwner: '!actionbar!&7Owner:&r [playerName]'
   circle: '&3圆形'
   square: '&5正方形'
   protectedArea: '&c保护区域. 不可以这样做.'
@@ -727,7 +729,7 @@ afk:
   MayNotRespond: '&e玩家处于离开状态，可能无法回复你'
   MayNotRespondStaff: '&e服务器管理员处于离开状态，可能无法立刻解决你的问题'
 BossBar:
-  hpBar: '&f[victim] &e[max]&f/&e[current] &f(&c-[damage]&f)'
+  hpBar: '&f[victim] &e[current]&f/&e[max] &f(&c-[damage]&f)'
 Potion:
   Effects: '&8药水效果'
   List: '&e[PotionName] [PotionAmplifier] &e时长: &e[LeftDuration] &e秒'
@@ -873,6 +875,13 @@ command:
         置插入变量 \n&e$1 将获得新指令提供的变量并将其放在相应位置 \n&e$1- 将从这一处获得所有变量并将其插入原指令 \n&efromConsole!\
         \ 将在控制台执行指令"
       editInfo: '&e点击粘贴旧内容，或者输入 &6cancel &e来取消，或者输入 &6remove &e来移除一行'
+  anvil:
+    help:
+      info: '&e打开铁砧'
+      args: (玩家名称)
+    info:
+      feedback: '&e你为 &3[playerDisplayName]&e (&3[offon]&e) 打开了铁砧.'
+      targetfeedback: '&3[senderDisplayName]&e 为你打开了铁砧.'
   armorstand:
     help:
       info: '&e打开盔甲架编辑'
@@ -954,6 +963,7 @@ command:
       explanation:
       - cmi.command.ban.bypass - 使自己避免封禁
     info:
+      # Make sure that OverrideLoginMessage is enabled in config file
       message: '&c你已被该服务器封禁'
       reason: '&6原因: &e[reason]'
       defaultReason: '&e违反服务器规则'
@@ -1127,8 +1137,8 @@ command:
       info: '&e清空玩家背包'
       args: (玩家名称) (-s)
       explanation:
-      - '可选的清除类型: quickbar, inventory, partinventory, weapons, armorslots,
-        tools, armors, mainhand, offhand'
+      - '可选的清除类型: quickbar, inventory, partinventory, weapons, armorslots, tools,
+        armors, mainhand, offhand'
       - 需要以 + sign 开头
       - 可选择多种类型
       - cmi clear +armors - 会清除装甲类的物品
@@ -2049,6 +2059,22 @@ command:
       bannedBy: '&7封禁者: &f[source]'
       ends: '&7过期时间: &f[time]'
       related: "&7相关账户:\n&f[list]    "
+  item:
+    help:
+      info: '&e给自己武平'
+      args: '[物品名称] (数量)'
+      explanation:
+      - 名称 and lore 支持 placeholders
+      - '范例: /give stone'
+      - /give stone 5 n Stonehenge
+      - /give stick e knockback:1
+      - /give sponge l Got_item_on:_%date/YY/MM/dd-HH:mm:ss%
+      - /cmi give sponge 1 e Knockback:%rand/1-5%
+      - /cmi give sponge %rand/1-10%
+      - /give sponge a maxhealth:5:mainhand
+      - /give diamond_sword unbreakable
+      - /give mob_spawner:creeper
+      - /give minecraft:diamond_helmet 1 0 {ench:[{id:0,lvl:100},{id:2,lvl:100},{id:34,lvl:100}]}
   iteminfo:
     help:
       info: '&e显示物品信息'
@@ -2371,8 +2397,6 @@ command:
       hiddenCount: '&e&7([amount])'
       groupL: '&e[groupName]: &f[list]'
       player: '%cmi_user_afk_symbol%&f[playerDisplayName]'
-      # Add as many groups as you wish, by default there is only 10, to create new one, just copy paste one line and add increment into lines name, like group11 or group12 and so on.
-      # Player have to have appropriate permission node to be placed in group cmi.command.list.group.[groupnumber], bigger number have priority
       groups:
         group1: '&eGroup1: &f[list]'
         group2: '&eGroup2: &f[list]'
@@ -2630,6 +2654,10 @@ command:
       noNotesById: '&e这个玩家没有叫这个名字的便签'
       noNotes: '&e这个玩家没有任何已保存的便签'
       list: '&6[id]. &e[便签]'
+  openbook:
+    help:
+      info: '&e打开书本gui'
+      args: (cText) (玩家名称)
   oplist:
     help:
       info: '&e查看服务器OP列表'
@@ -2937,8 +2965,8 @@ command:
       - cmi.command.repair.repairshare.bypass - 不添加共享修复保护地修复物品
     info:
       feedback: '&e成功修理了 &3[amount]&e 件物品，被操作玩家 &3[playerDisplayName]&e (&3[offon]&e).'
-      feedbackMoney: '&e你需要 &3[amount]&e 个物品来 &3[playerDisplayName]&e
-        (&3[offon]&e). Cost: &7[cost]'
+      feedbackMoney: '&e你需要 &3[amount]&e 个物品来 &3[playerDisplayName]&e (&3[offon]&e).
+        Cost: &7[cost]'
       itemOwner: '&e上一次修复由: &6[owner]'
       cantUse: '!title!&c你不能使用这个!subtitle!&e请自己修理这个!'
   repaircost:
@@ -3683,7 +3711,7 @@ command:
         &6[time] &e理由是: &6[reason]'
       time: '&e你将在 &6[time] &e后解封'
       badTime: '&c指定的时间格式不正确'
-      badTimeRange: '&c你不能暂时封禁玩家超过这个时长: &6[seconds]'
+      badTimeRanges: '&c你不能暂时封禁玩家超过这个时长: [time] &6([seconds])'
   tempipban:
     help:
       info: '&e临时封禁ip'
@@ -3803,7 +3831,7 @@ command:
       info: '&e显示/隐藏不死图腾的冷却条'
       args: ''
     info:
-      notActive: '&e不死图腾冷却未启用'
+      toggle: '&e不死图冷却启用状态: ([state]&e)'
   top:
     help:
       info: '&e传送至你所在坐标的最高点'
