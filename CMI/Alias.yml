@@ -27,6 +27,9 @@ Alias:
   # /cmi aliaseditor $1-
   /aliaseditor: false
   #  
+  # /cmi anvil $1-
+  /anvil: false
+  #  
   # /cmi armorstand $1-
   /armorstand: false
   #  
@@ -125,6 +128,9 @@ Alias:
   # /cmi cplaytime $1-
   /cplaytime: false
   #  
+  # /cmi ctellraw $1-
+  /ctellraw: false
+  #  
   # /cmi ctext $1-
   /ctext: false
   #  
@@ -144,6 +150,9 @@ Alias:
   #  
   # /cmi dispose $1-
   /dispose: true
+  #  
+  # /cmi distance $1-
+  /distance: true
   #  
   # /cmi donate $1-
   /donate: false
@@ -181,6 +190,9 @@ Alias:
   /ec: false
   /cend: false
   /enderchest: false
+  #  
+  # /cmi endgateway $1-
+  /endgateway: false
   #  
   # /cmi entityinfo $1-
   /entityinfo: false
@@ -227,8 +239,6 @@ Alias:
   #  
   # /cmi give $1-
   /give: true
-  /i: false
-  /item: false
   #  
   # /cmi giveall $1-
   /giveall: false
@@ -339,6 +349,10 @@ Alias:
   # /cmi ipbanlist $1-
   /ipbanlist: false
   #  
+  # /cmi item $1-
+  /item: false
+  /i: false
+  #  
   # /cmi iteminfo $1-
   /iteminfo: false
   #  
@@ -374,6 +388,8 @@ Alias:
   #  
   # /cmi kit $1-
   /kit: true
+  # /cmi kit -preview $1-
+  /kitpreview: true
   #  
   # /cmi kitcdreset $1-
   /kitcdreset: false
@@ -461,6 +477,9 @@ Alias:
   #  
   # /cmi note $1-
   /note: true
+  #  
+  # /cmi openbook $1-
+  /openbook: true
   #  
   # /cmi oplist $1-
   /oplist: false
@@ -592,6 +611,11 @@ Alias:
   # /cmi scan $1-
   /scan: true
   #  
+  # /cmi scavenge $1-
+  /scavenge: true
+  /salvage: false
+  /recycle: false
+  #  
   # /cmi schedule $1-
   /schedule: false
   #  
@@ -613,8 +637,14 @@ Alias:
   # /cmi server $1-
   /server: false
   #  
+  # /cmi serverlist $1-
+  /serverlist: true
+  #  
   # /cmi servertime $1-
   /servertime: false
+  #  
+  # /cmi setenchantworth $1-
+  /setenchantworth: false
   #  
   # /cmi setfirstspawn $1-
   /setfirstspawn: false
@@ -822,6 +852,9 @@ Alias:
   #  
   # /cmi unmute $1-
   /unmute: false
+  #  
+  # /cmi unmutechat $1-
+  /unmutechat: false
   #  
   # /cmi usermeta $1-
   /usermeta: false
