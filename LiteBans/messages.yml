@@ -87,7 +87,7 @@ bungee_switch_banned: |-
 default_ban_reason: 你违反了服务器规定!
 default_mute_reason: Spamming
 permission_error: '&c你没有权限!'
-muted: '&c你已被禁言! ($duration remaining)!'
+muted: '&c你已被禁言! (剩余 $duration)!'
 muted_permanent: '&c你已被永久禁言!'
 notify:
   banned_player_join: '&c$player&f 尝试加入服务器, 但其被封禁 ($duration)!'
@@ -101,19 +101,19 @@ duration_limit_error: '&c允许的最大时长: $duration'
 warned_join: '&c你收到了新警告:'
 warned_join_entry: |-
   &4 - 被 &c$executor 警告 &4: &c$reason
-     &4(&c$timeSince ago&4)
+     &4(&c$timeSince 以前&4)
 command:
   ban:
     usage: '&cUsage: $command [-s] <player> [time spec] [reason]'
     unban_usage: '&cUsage: $command <player>'
     example: '&cExample: $command Player 7d [reason]'
     silent_prefix: '&f[&7Silent&f] '
-    broadcast_ban: '&a$executor &fbanned &a$bannedPlayer &ffor ''&a$reason&f'''
-    broadcast_tempban: '&a$executor &f因 ''&a$reason&f'' 限时封禁了 &a$playerName 
+    broadcast_ban: '&a$executor &f因 ''&a$reason&f'' &f封禁了 &a$bannedPlayer'
+    broadcast_tempban: '&a$executor &f因 ''&a$reason&f'' 封禁了 &a$playerName 
      &a$tempDuration'
-    broadcast_ip_ban: '&a$executor &fIP-banned &a$bannedPlayer &ffor ''&a$reason&f'''
-    broadcast_temp_ip_ban: '&a$executor &ftemp IP-banned &a$bannedIP &ffor $tempDuration
-      for ''&a$reason&f'''
+    broadcast_ip_ban: '&a$executor &f因 ''&a$reason&f'' &fIP-封禁了 &a$bannedPlayer'
+    broadcast_temp_ip_ban: '&a$executor &f因 ''&a$reason&f'' IP-封禁了 &a$bannedIP 
+     &a$tempDuration'
     broadcast_unban: '&a$executor &f解除了 &a$playerName &f的封禁'
     previous_ban_removed: '&aPrevious ban for $bannedPlayer removed.'
     previous_ban_existing: '&c$bannedPlayer is already banned, and you do not have
@@ -121,7 +121,7 @@ command:
     unban_queue: '&6If they try to reconnect, they will be unbanned.'
     error_no_spec: '&cNo valid time specification detected!'
     unban_fail: '&c目标未被封禁!'
-    no_override: '&cPlayer is already banned!'
+    no_override: '&c该玩家已被封禁!'
     exempt: '&cYou can''t ban $player!'
     cooldown: '&cYou need to wait $seconds seconds before you can use this command
       again.'
@@ -130,12 +130,12 @@ command:
     usage: '&cUsage: $command [-s] <player> [time spec] [reason]'
     unmute_usage: '&cUsage: $command <player>'
     example: '&cExample: $command Player 7d [reason]'
-    broadcast: '&a$executor &fmuted &a$mutedPlayer &ffor ''&a$reason&f'''
-    broadcast_tempmute: '&a$executor &f因 ''&a$reason&f'' 限时禁言了 &a$playerName 
+    broadcast: '&a$executor &f因 ''&a$reason&f'' &f禁言了 &a$mutedPlayer'
+    broadcast_tempmute: '&a$executor &f因 ''&a$reason&f'' 禁言了 &a$playerName 
      &a$tempDuration'
-    broadcast_ip_mute: '&a$executor &fIP-muted &a$playerName &ffor ''&a$reason&f'''
-    broadcast_temp_ip_mute: '&a$executor &ftemp IP-muted &a$mutedIP &ffor $tempDuration
-      for ''&a$reason&f'''
+    broadcast_ip_mute: '&a$executor &f因 ''&a$reason&f'' &fIP-禁言了  &a$playerName'
+    broadcast_temp_ip_mute: '&a$executor &f因 ''&a$reason&f'' IP-禁言了 &a$mutedIP 
+     &a$tempDuration'
     message: |-
       &c你因 &c'&4$reason&c' 被 $executor 禁言.
       &c禁言将持续 &4$duration.
@@ -144,7 +144,7 @@ command:
       &4此禁言永不过期.
     broadcast_unmute: '&a$executor &f解除了 &a$bannedPlayer &f的禁言'
     unmute_fail: '&c目标未被禁言!'
-    no_override: '&cPlayer is already muted!'
+    no_override: '&c该玩家已被禁言!'
     previous_mute_removed: '&a先前对 $mutedPlayer 的禁言已被移除.'
     previous_mute_existing: '&c$mutedPlayer is already muted, and you do not have
       permissions to replace existing mutes.'
@@ -160,10 +160,10 @@ command:
     message: |-
       &cYou have been warned by $executor&c for &c'$reason&c'.
       &c此警告将于 $duration 后过期.
-    list_entry: '&f \- Warned by $executor: ''$reason&f'''
-    unwarn_response: '&aLast warning removed for $player.'
+    list_entry: '&f \- 被 $executor 警告: ''$reason&f'''
+    unwarn_response: '&a移除了 $player 的最后一条警告.'
     unwarn_fail: '&c目标未被警告!'
-    exempt: '&cYou can''t warn $player!'
+    exempt: '&c你不可以警告 $player!'
     cooldown: '&cYou need to wait $seconds seconds before you can use this command
       again.'
     response: ''
